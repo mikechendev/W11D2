@@ -34376,6 +34376,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var _frontend_store_store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./frontend/store/store */ "./frontend/store/store.js");
 /* harmony import */ var _frontend_actions_todo_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./frontend/actions/todo_actions */ "./frontend/actions/todo_actions.js");
+/* harmony import */ var _frontend_actions_step_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./frontend/actions/step_actions */ "./frontend/actions/step_actions.js");
+
 
 
 
@@ -34383,7 +34385,13 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener('DOMContentLoaded', function () {
   var store = _frontend_store_store__WEBPACK_IMPORTED_MODULE_2__["default"];
   window.store = store;
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Root, null), document.getElementById('root'));
+  window.receiveTodo = _frontend_actions_todo_actions__WEBPACK_IMPORTED_MODULE_3__.receiveTodo;
+  window.receiveTodos = _frontend_actions_todo_actions__WEBPACK_IMPORTED_MODULE_3__.receiveTodos;
+  window.removeTodo = _frontend_actions_todo_actions__WEBPACK_IMPORTED_MODULE_3__.removeTodo;
+  window.receiveStep = _frontend_actions_step_actions__WEBPACK_IMPORTED_MODULE_4__.receiveStep;
+  window.receiveSteps = _frontend_actions_step_actions__WEBPACK_IMPORTED_MODULE_4__.receiveSteps;
+  window.removeStep = _frontend_actions_step_actions__WEBPACK_IMPORTED_MODULE_4__.removeStep;
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Todos, null), document.getElementById('root'));
 });
 
 var Root = function Root() {

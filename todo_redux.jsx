@@ -6,11 +6,22 @@ import {
   receiveTodos,
   removeTodo,
 } from './frontend/actions/todo_actions';
+import {
+  receiveStep,
+  receiveSteps,
+  removeStep,
+} from './frontend/actions/step_actions';
 
 document.addEventListener('DOMContentLoaded', function () {
   const store = configureStore;
   window.store = store;
-  ReactDOM.render(<Root />, document.getElementById('root'));
+  window.receiveTodo = receiveTodo;
+  window.receiveTodos = receiveTodos;
+  window.removeTodo = removeTodo;
+  window.receiveStep = receiveStep;
+  window.receiveSteps = receiveSteps;
+  window.removeStep = removeStep;
+  ReactDOM.render(<Todos />, document.getElementById('root'));
 });
 
 const Root = () => {
