@@ -292,18 +292,12 @@ var TodoListItem = /*#__PURE__*/function (_Component) {
 
   var _super = _createSuper(TodoListItem);
 
-  function TodoListItem() {
+  function TodoListItem(props) {
     var _this;
 
     _classCallCheck(this, TodoListItem);
 
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _super.call.apply(_super, [this].concat(args));
-
-    _defineProperty(_assertThisInitialized(_this), "state", _this.props.todo);
+    _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "handleClick", function (e) {
       e.preventDefault();
@@ -330,8 +324,11 @@ var TodoListItem = /*#__PURE__*/function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "render", function () {
-      // const { todo, removeTodo, receiveTodo } = this.props;
-      var status = _this.props.todo.done ? 'DONE' : 'UNDO';
+      var _this$props = _this.props,
+          todo = _this$props.todo,
+          removeTodo = _this$props.removeTodo,
+          receiveTodo = _this$props.receiveTodo;
+      var status = todo.done ? 'DONE' : 'UNDO';
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, todo.title, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
         onClick: _this.handleClick
       }, "delete"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
@@ -339,6 +336,7 @@ var TodoListItem = /*#__PURE__*/function (_Component) {
       }, status));
     });
 
+    _this.state = props.todo;
     return _this;
   }
 

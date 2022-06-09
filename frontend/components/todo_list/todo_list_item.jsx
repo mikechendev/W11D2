@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 
 class TodoListItem extends Component {
-  state = this.props.todo;
+  constructor(props) {
+    super(props);
+    this.state = props.todo;
+  }
 
   handleClick = (e) => {
     e.preventDefault();
@@ -22,8 +25,8 @@ class TodoListItem extends Component {
   };
 
   render = () => {
-    // const { todo, removeTodo, receiveTodo } = this.props;
-    const status = this.props.todo.done ? 'DONE' : 'UNDO';
+    const { todo, removeTodo, receiveTodo } = this.props;
+    const status = todo.done ? 'DONE' : 'UNDO';
     return (
       <li>
         {todo.title}
