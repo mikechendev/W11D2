@@ -11,6 +11,9 @@ import {
   receiveSteps,
   removeStep,
 } from './frontend/actions/step_actions';
+import App from './frontend/components/app';
+import Root from './frontend/components/root';
+import {allTodos} from './frontend/reducers/selectors';
 
 document.addEventListener('DOMContentLoaded', function () {
   const store = configureStore;
@@ -21,13 +24,14 @@ document.addEventListener('DOMContentLoaded', function () {
   window.receiveStep = receiveStep;
   window.receiveSteps = receiveSteps;
   window.removeStep = removeStep;
-  ReactDOM.render(<Todos />, document.getElementById('root'));
+  window.allTodos = allTodos;
+  ReactDOM.render(<Root store={store}/>, document.getElementById('root'));
 });
 
-const Root = () => {
-  return (
-    <div className="content-container">
-      <h1>Todos App</h1>
-    </div>
-  );
-};
+// const Root = () => {
+//   return (
+//     <div className="content-container">
+//       <h1>Todos App</h1>
+//     </div>
+//   );
+// };
