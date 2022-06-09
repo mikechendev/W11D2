@@ -23,3 +23,8 @@ export const fetchTodos = () => async (dispatch) => {
   const response = await APIUtil.getTodos;
   dispatch(receiveTodos(response));
 };
+
+export const createTodo = (todo) => async (dispatch) => {
+  const response = await APIUtil.postTodos(todo);
+  dispatch(receiveTodo(response));
+};

@@ -5,6 +5,8 @@ import {
   receiveTodo,
   receiveTodos,
   removeTodo,
+  fetchTodos,
+  createTodo,
 } from './frontend/actions/todo_actions';
 import {
   receiveStep,
@@ -14,7 +16,7 @@ import {
 import App from './frontend/components/app';
 import Root from './frontend/components/root';
 import { allTodos } from './frontend/reducers/selectors';
-import { fetchTodos } from './frontend/util/todo_api_util';
+import { getTodos } from './frontend/util/todo_api_util';
 
 document.addEventListener('DOMContentLoaded', function () {
   const store = configureStore();

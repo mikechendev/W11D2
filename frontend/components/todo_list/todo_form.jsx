@@ -17,15 +17,9 @@ class TodoForm extends Component {
     this.setState({ body: e.target.value });
   };
 
-  // updateDone = (e) => {
-  //   this.setState({ done: e.target.value });
-  // };
-
   handleClick = (e) => {
     e.preventDefault();
-    // this.props.receiveTodos(this.state);
     this.props.receiveTodo(this.state);
-    // this.props.removeTodo(this.state);
     this.setState({
       id: uniqueId(),
       title: '',

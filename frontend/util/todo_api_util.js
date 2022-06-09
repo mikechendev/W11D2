@@ -4,3 +4,10 @@ export const getTodos = () => {
     url: './api/todos',
   });
 };
+
+export const postTodos = (todo) => {
+  $.ajax({
+    method: 'POST',
+    url: './api/todos',
+  });
+};
