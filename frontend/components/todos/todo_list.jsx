@@ -16,7 +16,7 @@ const TodoList = (props) => {
           />
         ))}
       </ul>
-      <TodoForm receiveTodo={props.receiveTodo} />
+      <TodoForm receiveTodo={props.receiveTodo} createTodo={props.createTodo} />
     </div>
   );
 };

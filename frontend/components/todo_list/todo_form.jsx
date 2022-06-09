@@ -3,7 +3,6 @@ import uniqueId from '../../util/unique_id';
 
 class TodoForm extends Component {
   state = {
-    id: uniqueId(),
     title: '',
     body: '',
     done: false,
@@ -19,9 +18,8 @@ class TodoForm extends Component {
 
   handleClick = (e) => {
     e.preventDefault();
-    this.props.receiveTodo(this.state);
+    this.props.createTodo(this.state);
     this.setState({
-      id: uniqueId(),
       title: '',
       body: '',
       done: false,

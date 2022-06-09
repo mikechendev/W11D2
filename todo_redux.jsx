@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.removeStep = removeStep;
   window.allTodos = allTodos;
   window.fetchTodos = fetchTodos;
+  window.createTodo = createTodo;
   ReactDOM.render(<Root store={store} />, document.getElementById('root'));
 });
 

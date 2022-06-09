@@ -5,11 +5,12 @@ class Api::TodosController < ApplicationController
   end
 
   def index
-
+    render json: Todo.all
   end
 
   def create
     @todo = Todo.new(todo_params)
+    @todo.done = false
     if @todo.save
       render json: @todo
     else
@@ -28,7 +29,7 @@ class Api::TodosController < ApplicationController
   private
 
   def todo_params
-    params.require(:todos).permit(:title, :body, :done)
+    params.require(:todo).permit(:title, :body, :done)
   end
   
 end

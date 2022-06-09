@@ -312,3 +312,300 @@ Completed 200 OK in 1362ms (Views: 1361.3ms | ActiveRecord: 0.0ms)
 
   [1m[36mTodo Load (10.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
   [1m[36mTodo Load (1.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+Started GET "/api/todos" for ::1 at 2022-06-09 16:53:51 -0400
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (1.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:8
+Completed 200 OK in 99ms (Views: 53.5ms | ActiveRecord: 27.9ms)
+
+
+Started GET "/api/todos" for ::1 at 2022-06-09 16:55:34 -0400
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (4.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:8
+Completed 200 OK in 15ms (Views: 9.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for ::1 at 2022-06-09 17:02:04 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 1853ms (Views: 1851.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mTodo Load (1.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  [1m[36mTodo Load (7.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+Started GET "/api/todos" for ::1 at 2022-06-09 17:06:13 -0400
+  [1m[35m (8.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mc/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:8
+Completed 200 OK in 39ms (Views: 9.3ms | ActiveRecord: 26.7ms)
+
+
+Started GET "/" for ::1 at 2022-06-09 17:14:36 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 4226ms (Views: 4225.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mTodo Load (1.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+Started GET "/" for ::1 at 2022-06-09 17:17:08 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 1577ms (Views: 1576.3ms | ActiveRecord: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bundle.js-ce414187598d21ac677d0be6cbf970cc723e1ba437c548fd6196914ad3fc0900.map"):
+  
+actionpack (5.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.8) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.8) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.8) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.8) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2022-06-09 17:28:24 -0400
+  [1m[35m (7.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mc/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 2707ms (Views: 2707.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-06-09 17:28:35 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 43ms (Views: 42.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-06-09 17:32:45 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 1957ms (Views: 1955.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/todos" for ::1 at 2022-06-09 17:32:50 -0400
+Processing by Api::TodosController#create as JSON
+Completed 400 Bad Request in 51ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: todos:
+  app/controllers/api/todos_controller.rb:31:in `todo_params'
+  app/controllers/api/todos_controller.rb:12:in `create'
+
+Started GET "/" for ::1 at 2022-06-09 17:32:50 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 38ms (Views: 37.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/todos" for ::1 at 2022-06-09 17:35:43 -0400
+Started GET "/" for ::1 at 2022-06-09 17:35:43 -0400
+Processing by Api::TodosController#create as JSON
+Completed 400 Bad Request in 8ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: todo:
+  app/controllers/api/todos_controller.rb:31:in `todo_params'
+  app/controllers/api/todos_controller.rb:12:in `create'
+
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 61ms (Views: 60.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/todos" for ::1 at 2022-06-09 17:35:54 -0400
+Started GET "/" for ::1 at 2022-06-09 17:35:54 -0400
+Processing by Api::TodosController#create as JSON
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: todo:
+  app/controllers/api/todos_controller.rb:31:in `todo_params'
+  app/controllers/api/todos_controller.rb:12:in `create'
+
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 65ms (Views: 64.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/todos" for ::1 at 2022-06-09 17:36:52 -0400
+Processing by Api::TodosController#create as JSON
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: todo:
+  app/controllers/api/todos_controller.rb:31:in `todo_params'
+  app/controllers/api/todos_controller.rb:12:in `create'
+
+Started GET "/" for ::1 at 2022-06-09 17:36:52 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2404ms (Views: 2403.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/todos" for ::1 at 2022-06-09 17:38:49 -0400
+Processing by Api::TodosController#create as JSON
+Completed 400 Bad Request in 18ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: todo:
+  app/controllers/api/todos_controller.rb:31:in `todo_params'
+  app/controllers/api/todos_controller.rb:12:in `create'
+
+Started POST "/api/todos" for ::1 at 2022-06-09 17:40:05 -0400
+Processing by Api::TodosController#create as JSON
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: todo:
+  app/controllers/api/todos_controller.rb:31:in `todo_params'
+  app/controllers/api/todos_controller.rb:12:in `create'
+
+Started POST "/api/todos" for ::1 at 2022-06-09 17:40:07 -0400
+Processing by Api::TodosController#create as JSON
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: todo:
+  app/controllers/api/todos_controller.rb:31:in `todo_params'
+  app/controllers/api/todos_controller.rb:12:in `create'
+
+Started POST "/api/todos" for ::1 at 2022-06-09 17:40:13 -0400
+Processing by Api::TodosController#create as JSON
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: todo:
+  app/controllers/api/todos_controller.rb:31:in `todo_params'
+  app/controllers/api/todos_controller.rb:12:in `create'
+
+Started POST "/api/todos" for ::1 at 2022-06-09 17:45:37 -0400
+Processing by Api::TodosController#create as JSON
+Completed 400 Bad Request in 9ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: todo:
+  app/controllers/api/todos_controller.rb:31:in `todo_params'
+  app/controllers/api/todos_controller.rb:12:in `create'
+
+Started POST "/api/todos" for ::1 at 2022-06-09 17:46:06 -0400
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mc/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by Api::TodosController#create as JSON
+Completed 400 Bad Request in 44ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: todo:
+  app/controllers/api/todos_controller.rb:31:in `todo_params'
+  app/controllers/api/todos_controller.rb:12:in `create'
+
+Started GET "/" for ::1 at 2022-06-09 17:49:44 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 2254ms (Views: 2253.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/todos" for ::1 at 2022-06-09 17:49:57 -0400
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"yo", "body"=>"wtf", "done"=>"false"}}
+  [1m[35m (5.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:14
+  [1m[36mTodo Create (172.7ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "yo"], ["body", "wtf"], ["done", false], ["created_at", "2022-06-09 21:49:57.695135"], ["updated_at", "2022-06-09 21:49:57.695135"]]
+  ↳ app/controllers/api/todos_controller.rb:14
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:14
+Completed 200 OK in 340ms (Views: 0.6ms | ActiveRecord: 325.3ms)
+
+
+  [1m[36mTodo Load (4.9ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+Started GET "/" for ::1 at 2022-06-09 17:52:36 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mc/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 2125ms (Views: 2124.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/todos" for ::1 at 2022-06-09 17:52:50 -0400
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"this fucking works", "body"=>"lfg", "done"=>"false"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:14
+  [1m[36mTodo Create (0.5ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "this fucking works"], ["body", "lfg"], ["done", false], ["created_at", "2022-06-09 21:52:50.562186"], ["updated_at", "2022-06-09 21:52:50.562186"]]
+  ↳ app/controllers/api/todos_controller.rb:14
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:14
+Completed 200 OK in 41ms (Views: 0.4ms | ActiveRecord: 29.7ms)
+
+
+Started POST "/api/todos" for ::1 at 2022-06-09 17:55:04 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mc/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"hell yeah", "body"=>"fucking right", "done"=>"false"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:14
+  [1m[36mTodo Create (0.5ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "hell yeah"], ["body", "fucking right"], ["done", false], ["created_at", "2022-06-09 21:55:05.289354"], ["updated_at", "2022-06-09 21:55:05.289354"]]
+  ↳ app/controllers/api/todos_controller.rb:14
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:14
+Completed 200 OK in 30ms (Views: 0.4ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/api/todos" for ::1 at 2022-06-09 17:55:17 -0400
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (9.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:8
+Completed 200 OK in 25ms (Views: 15.2ms | ActiveRecord: 9.2ms)
+
+

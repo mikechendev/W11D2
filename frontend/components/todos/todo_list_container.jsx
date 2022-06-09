@@ -9,6 +9,7 @@ const mapDispatchToProps = (dispatch) => ({
   receiveTodo: (todo) => dispatch(receiveTodo(todo)),
   removeTodo: (todo) => dispatch(removeTodo(todo)),
   fetchTodos: () => dispatch(fetchTodos()),
+  createTodo: (todo) => dispatch(createTodo(todo)),
 });
 
 const TodoListContainer = connect(
