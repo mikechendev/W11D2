@@ -314,21 +314,20 @@ var TodoForm = /*#__PURE__*/function (_Component) {
       });
     });
 
-    _defineProperty(_assertThisInitialized(_this), "handleClick", function (e) {
+    _defineProperty(_assertThisInitialized(_this), "handleSubmit", function (e) {
       e.preventDefault();
 
-      _this.props.createTodo(_this.state);
-
-      _this.setState({
-        title: '',
-        body: '',
-        done: false
+      _this.props.createTodo(_this.state).then(function () {
+        return _this.setState({
+          title: '',
+          body: ''
+        });
       });
     });
 
     _defineProperty(_assertThisInitialized(_this), "render", function () {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", {
-        onSubmit: _this.handleClick
+        onSubmit: _this.handleSubmit
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Add Todo"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, "Title", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
         type: "text",
         value: _this.state.title,

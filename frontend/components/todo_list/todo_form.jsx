@@ -16,19 +16,19 @@ class TodoForm extends Component {
     this.setState({ body: e.target.value });
   };
 
-  handleClick = (e) => {
+  handleSubmit = (e) => {
     e.preventDefault();
-    this.props.createTodo(this.state);
-    this.setState({
-      title: '',
-      body: '',
-      done: false,
-    });
+    this.props.createTodo(this.state).then(() =>
+      this.setState({
+        title: '',
+        body: '',
+      })
+    );
   };
 
   render = () => {
     return (
-      <form onSubmit={this.handleClick}>
+      <form onSubmit={this.handleSubmit}>
         <h1>Add Todo</h1>
         <label>
           Title
