@@ -1,40 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class TodoListItem extends Component {
-  constructor(props) {
-    super(props);
-    this.state = props.todo;
-  }
-
-  handleClick = (e) => {
+const TodoListItem = (props) => {
+  const handleClick = (e) => {
     e.preventDefault();
-    this.props.removeTodo(this.props.todo);
+    props.removeTodo(props.todo);
   };
 
-  toggleDone = (e) => {
+  const toggleDone = (e) => {
     e.preventDefault();
-    if (this.state.done) {
-      this.setState({ done: false }, () => {
-        this.props.receiveTodo(this.state);
-      });
-    } else {
-      this.setState({ done: true }, () => {
-        this.props.receiveTodo(this.state);
-      });
-    }
+    props.todo.done = !props.todo.done;
+    props.receiveTodo(props.todo);
   };
 
-  render = () => {
-    const { todo, removeTodo, receiveTodo } = this.props;
-    const status = todo.done ? 'DONE' : 'UNDO';
-    return (
-      <li>
-        {todo.title}
-        <button onClick={this.handleClick}>delete</button>
-        <button onClick={this.toggleDone}>{status}</button>
-      </li>
-    );
-  };
-}
+  const status = props.todo.done ? 'UNDO' : 'DONE';
+  return (
+    <li>
+      {props.todo.title}
+      <button onClick={handleClick}>delete</button>
+      <button onClick={toggleDone}>{status}</button>
+    </li>
+  );
+};
 
 export default TodoListItem;
