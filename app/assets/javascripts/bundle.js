@@ -137,11 +137,11 @@ var fetchTodos = function fetchTodos() {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return _util_todo_api_util__WEBPACK_IMPORTED_MODULE_0__.getTodos;
+              return _util_todo_api_util__WEBPACK_IMPORTED_MODULE_0__.getTodos();
 
             case 2:
               response = _context.sent;
-              dispatch(receiveTodos(response));
+              return _context.abrupt("return", dispatch(receiveTodos(response)));
 
             case 4:
             case "end":
@@ -165,13 +165,14 @@ var createTodo = function createTodo(todo) {
           switch (_context2.prev = _context2.next) {
             case 0:
               _context2.next = 2;
-              return _util_todo_api_util__WEBPACK_IMPORTED_MODULE_0__.postTodos(todo);
+              return _util_todo_api_util__WEBPACK_IMPORTED_MODULE_0__.postTodo(todo);
 
             case 2:
               response = _context2.sent;
-              dispatch(receiveTodo(response));
+              debugger;
+              return _context2.abrupt("return", dispatch(receiveTodo(response)));
 
-            case 4:
+            case 5:
             case "end":
               return _context2.stop();
           }
@@ -472,8 +473,8 @@ __webpack_require__.r(__webpack_exports__);
 var TodoList = function TodoList(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", null, props.todos.map(function (todo) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_todo_list_todo_list_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      todo: todo,
       key: todo.id,
+      todo: todo,
       removeTodo: props.removeTodo,
       receiveTodo: props.receiveTodo
     });
@@ -789,18 +790,18 @@ var configureStore = function configureStore() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "getTodos": () => (/* binding */ getTodos),
-/* harmony export */   "postTodos": () => (/* binding */ postTodos)
+/* harmony export */   "postTodo": () => (/* binding */ postTodo)
 /* harmony export */ });
 var getTodos = function getTodos() {
-  $.ajax({
+  return $.ajax({
     method: 'GET',
-    url: './api/todos'
+    url: 'api/todos'
   });
 };
-var postTodos = function postTodos(todo) {
-  $.ajax({
+var postTodo = function postTodo(todo) {
+  return $.ajax({
     method: 'POST',
-    url: './api/todos',
+    url: 'api/todos',
     data: {
       todo: todo
     }
